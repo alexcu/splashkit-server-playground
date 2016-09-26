@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>SplashKit Playground Server</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+    <style>
+    .col-sm-6:first-of-type {
+      padding-left: 0;
+    }
+    .col-sm-6:last-of-type {
+      padding-right: 0;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+            <h1>SplashKit Playground Server</h1>
+            <p>
+              Server is running on port <code id="port"></code>.
+              <br>
+              Send POST requests to <code id="post-url"></code>.
+            </p>
+        </div>
+        <div class="row">
+            <h2>Data</h2>
+            <div class="post-data-container col-xs-12 col-sm-6">
+                <div id="post-data" class="panel panel-primary">
+                    <div class="panel-heading">Sent</div>
+                    <div class="panel-body">
+                      <p class="no-data">No data sent... yet</p>
+                    </div>
+                </div>
+            </div>
+            <div class="get-data-container col-xs-12 col-sm-6">
+                <div id="get-data" class="panel panel-primary">
+                    <div class="panel-heading">Requested</div>
+                    <div class="panel-body">
+                      <p class="no-data">No data requested... yet</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
+
+  <script>require('./renderer.js')</script>
+</html>
